@@ -1,0 +1,145 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: white;
+    border-right: 1px solid #e6edf8;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.05);
+}
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.menu {
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:15px 20px;
+    border-radius:15px;
+    font-size:16px;
+    font-weight:500;
+    color:#1d3d75;
+    cursor:pointer;
+    transition:0.3s;
+}
+.menu-icon{
+    font-size:16px;
+    color:inherit;
+    flex-shrink:0;
+}
+
+
+.menu-item.active{
+    background:linear-gradient(90deg,#3b82f6,#2563eb);
+    color:#fff;
+    box-shadow:0 8px 20px rgba(59,130,246,.25);
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 13px 18px;
+    margin-bottom: 8px;
+
+    border-radius: 16px;
+
+    color: #23467d;
+   font-size: 24px;
+    font-weight: 400;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-item:not(.active):hover {
+    background: #eef5ff;
+}
+
+.menu-item span:last-child {
+    flex: 1;
+}
+
+.menu-icon {
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.menu-item.active {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    box-shadow: 0 8px 18px rgba(59,130,246,0.25);
+}
+.sidebar{
+    position: relative;
+    overflow: hidden;
+}
+
+.menu{
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar-watermark{
+    position: absolute;
+
+    bottom: -90px;
+    left: -55px;
+
+    width: 165px;
+
+    opacity: 0.27;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.logo{
+    position: relative;
+    z-index: 2;
+}
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+.sidebar{
+    width:70px;
+}
+
+.logo img{
+    width:55px;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:16px 18px;
+
+    margin:8px 10px;
+
+    border-radius:14px;
+
+    font-size:19px;
+
+    transition:.3s;
+}
+
+.menu-item span:last-child{
+    display:none;
+}
+
+.sidebar-watermark{
+    display:none;
+}
+
+}
